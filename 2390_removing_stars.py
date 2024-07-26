@@ -18,12 +18,12 @@ from typing import List
 class Solution:
     def main(self, s: str) -> str:
         stack = []
-        for i in range(len(s)):
-            if s[i] == "*":
+        for i in s:
+            if i == "*":
                 if stack:
                     stack.pop()
             else:
-                stack.append(s[i])
+                stack.append(i)
         return "".join(stack)
 
 

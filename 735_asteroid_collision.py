@@ -35,24 +35,24 @@ from typing import List
 class Solution:
     def main(self, asteroids: List[int]) -> List:
         stack = []
-        for i in range(len(asteroids)):
+        for i in asteroids:
             if len(stack) == 0:
-                stack.append(asteroids[i])
+                stack.append(i)
             else:
-                if asteroids[i] < 0:
-                    while len(stack) > 0 and 0 < stack[-1] < abs(asteroids[i]):
+                if i < 0:
+                    while len(stack) > 0 and 0 < stack[-1] < abs(i):
                         stack.pop()
                     if len(stack) == 0:
-                        stack.append(asteroids[i])
+                        stack.append(i)
                         continue
-                    if stack[-1] + asteroids[i] == 0:
+                    if stack[-1] + i == 0:
                         stack.pop()
-                    elif stack[-1] > abs(asteroids[i]):
+                    elif stack[-1] > abs(i):
                         continue
                     else:
-                        stack.append(asteroids[i])
-                elif asteroids[i] > 0:
-                    stack.append(asteroids[i])
+                        stack.append(i)
+                elif i > 0:
+                    stack.append(i)
         return stack
 
 
