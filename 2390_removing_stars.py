@@ -1,6 +1,6 @@
 from typing import List
 
-# Problem:
+# Problem 2390. Removing Stars:
 # You are given a string s, which contains stars *.
 #
 # In one operation, you can:

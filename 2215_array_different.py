@@ -1,6 +1,6 @@
 from typing import List
 
-# Problem:
+# Problem 2215. Array Difference:
 # Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
 #
 # answer[0] is a list of all distinct integers in nums1 which are not present in nums2.
